@@ -28,7 +28,7 @@ User Authentication
 <img width="1907" height="1011" alt="Screenshot 2026-05-21 191122" src="https://github.com/user-attachments/assets/5478b887-75e6-4ca1-994f-1597bb81a47a" />
 <img width="1912" height="1017" alt="Screenshot 2026-05-21 192001" src="https://github.com/user-attachments/assets/e4fba9a3-26dc-4630-8e18-54be8e055c64" />
 
-Dashboard
+Student Dashboard
 <img width="1917" height="1017" alt="Screenshot 2026-05-21 192246" src="https://github.com/user-attachments/assets/b60e9d7d-7db1-4752-91eb-daa22f90c0ca" />
 
 Assignment Management
