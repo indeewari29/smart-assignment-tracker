@@ -1,6 +1,6 @@
 # Smart Assignment & Deadline Tracking System with AI Reminders
 
-## Description
+## Introduction
 
 A web-based application that helps students track assignments, break down tasks into subtasks, monitor stress levels, and receive AI-powered gentle suggestions.
 
@@ -21,10 +21,6 @@ A web-based application that helps students track assignments, break down tasks 
 - Backend - PHP
 - Database - MySQL
 - AI Engine - Prolog (SWI-Prolog)
-
-## Project Structure
-
-
 
 ## Installation
 
@@ -55,7 +51,7 @@ A web-based application that helps students track assignments, break down tasks 
    Start Apache and MySQL in XAMPP
    Open browser: http://localhost/smart-assignment-tracker/login.php
 
-## Test Accounts (Role,	Email,	Password)
+## Test Accounts (Role,	Email, Password)
 
-Student,	dilmini@student.edu,	pass_dilmini123
-Admin,	kamal@admin.edu, admin_pass123
+- Student,	dilmini@student.edu,	pass_dilmini123
+- Admin,	kamal@admin.edu, admin_pass123
