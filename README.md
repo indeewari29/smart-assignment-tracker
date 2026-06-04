@@ -2,9 +2,9 @@
 
 A web-based application that helps students track assignments, break down tasks into subtasks, monitor stress levels, and receive AI-powered gentle suggestions.
 
-## Features
+## 1. Features
 
-1. **User Authentication** – Login, Signup, Logout (Student/Admin roles)
+- **User Authentication** – Login, Signup, Logout (Student/Admin roles)
 - **Assignment Management** – Add, Edit, Delete assignments with color-coded priority (High/Medium/Low)
 - **Subtask Breakdown** – Break assignments into smaller tasks with progress bar
 - **Mood Tracker** – 3 questions about body, energy, and mind to calculate stress level
@@ -13,36 +13,28 @@ A web-based application that helps students track assignments, break down tasks 
 - **Admin Panel** – View all users and assignments, delete users
 - **Crisis Support** – Links to NHS mental wellbeing resources and local crisis helpline
 
-## Tech Stack
+## 2. Tech Stack
 
-Frontend - HTML, CSS, JavaScript
-Backend - PHP
-Database - MySQL
-AI Engine - Prolog (SWI-Prolog)
+- Frontend - HTML, CSS, JavaScript
+- Backend - PHP
+- Database - MySQL
+- AI Engine - Prolog (SWI-Prolog)
 
-## Database Tables
-
-users - User accounts (student/admin) 
-assignments - Assignment details with user_id foreign key
-subtask - Subtasks for each assignment 
-stress - Mood tracker stress level entries 
-reminder - AI-generated reminders (reserved)
-
-## Project Structure
+## 3. Project Structure
 
 smart-assignment-tracker/
-├── assets/ # CSS, JS, images
-├── classes/ # PHP classes (User, Assignment, Subtask, Repositories)
-├── templates/ # HTML templates (login, dashboard, mood tracker, etc.)
-├── login.php # Login logic
-├── signup.php # Signup logic
-├── dashboard.php # Dashboard logic
-├── mood_tracker.php # Mood tracker logic
-├── ai_suggestion.php # AI suggestion page
-├── admin.php # Admin panel
-├── subtasks.php # Subtask management
-├── ai_rule.pl # Prolog AI rules
-└── smart_assignment_tracker.sql # Database export
+- assets/ # CSS, JS, images
+- classes/ # PHP classes (User, Assignment, Subtask, Repositories)
+- templates/ # HTML templates (login, dashboard, mood tracker, etc.)
+- login.php # Login logic
+- signup.php # Signup logic
+- dashboard.php # Dashboard logic
+- mood_tracker.php # Mood tracker logic
+- ai_suggestion.php # AI suggestion page
+- admin.php # Admin panel
+- subtasks.php # Subtask management
+- ai_rule.pl # Prolog AI rules
+- smart_assignment_tracker.sql # Database export
 
 
 ## Installation
