@@ -22,6 +22,12 @@ A web-based application that helps students track assignments, break down tasks 
 - Database - MySQL
 - AI Engine - Prolog (SWI-Prolog)
 
+## Visuals of Interfaces
+
+- Login
+<img width="1907" height="1011" alt="Screenshot 2026-05-21 191122" src="https://github.com/user-attachments/assets/5478b887-75e6-4ca1-994f-1597bb81a47a" />
+
+
 ## Installation
 
 ### Prerequisites
