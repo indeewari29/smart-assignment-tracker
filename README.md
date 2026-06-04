@@ -15,8 +15,8 @@ A web-based application that helps students track assignments, break down tasks 
 
 ## Tech Stack
 
-- Frontend - HTML, CSS, JavaScript
-- Backend - PHP
+Frontend - HTML, CSS, JavaScript
+Backend - PHP
 - Database - MySQL
 - AI Engine - Prolog (SWI-Prolog)
 
