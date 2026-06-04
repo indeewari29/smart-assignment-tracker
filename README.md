@@ -51,7 +51,7 @@ AI suggestions & Crisis Support
 <img width="1918" height="1013" alt="Screenshot 2026-05-21 193411" src="https://github.com/user-attachments/assets/2198e2b5-154d-415d-8746-a8585b8334c6" />
 
 Browser Notifications
-<img width="606" height="790" alt="Screenshot 2026-05-21 193446" src="https://github.com/user-attachments/assets/0d07d1dd-50d7-4fc3-b0f4-3df609e6a734" />
+<img width="1645" height="815" alt="Screenshot 2026-06-04 161322" src="https://github.com/user-attachments/assets/676cb18c-9394-4c71-9b9c-70f32731d825" />
 
 Admin Panel
 <img width="1913" height="1012" alt="Screenshot 2026-05-21 193617" src="https://github.com/user-attachments/assets/7ce55ab6-9d55-4147-bfc2-a77847751bea" />
