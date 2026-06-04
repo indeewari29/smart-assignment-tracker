@@ -4,7 +4,7 @@ A web-based application that helps students track assignments, break down tasks 
 
 ## Features
 
-- **User Authentication** – Login, Signup, Logout (Student/Admin roles)
+1. **User Authentication** – Login, Signup, Logout (Student/Admin roles)
 - **Assignment Management** – Add, Edit, Delete assignments with color-coded priority (High/Medium/Low)
 - **Subtask Breakdown** – Break assignments into smaller tasks with progress bar
 - **Mood Tracker** – 3 questions about body, energy, and mind to calculate stress level
