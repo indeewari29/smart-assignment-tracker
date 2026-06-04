@@ -1,6 +1,4 @@
-# Project Title
-
-Smart Assignment & Deadline Tracking System with AI Reminders
+# Smart Assignment & Deadline Tracking System with AI Reminders
 
 ## Description
 
@@ -8,14 +6,14 @@ A web-based application that helps students track assignments, break down tasks 
 
 ## Features
 
-1. User Authentication – Login, Signup, Logout (Student/Admin roles)
-2. Assignment Management – Add, Edit, Delete assignments with color-coded priority (High/Medium/Low)
-3. Subtask Breakdown – Break assignments into smaller tasks with progress bar
-4. Mood Tracker – 3 questions about body, energy, and mind to calculate stress level
-5. AI Suggestions – Prolog rule-based expert system (12 IF-THEN rules) providing personalized gentle suggestions
-6. Browser Notifications – Pop-up reminders for deadlines within 3 days
-7. Admin Panel – View all users and assignments, delete users
-8. Crisis Support – Links to NHS mental wellbeing resources and local crisis helpline
+- User Authentication - Login, Signup, Logout (Student/Admin roles)
+- Assignment Management – Add, Edit, Delete assignments with color-coded priority (High/Medium/Low)
+- Subtask Breakdown – Break assignments into smaller tasks with progress bar
+- Mod Tracker – 3 questions about body, energy, and mind to calculate stress level
+- AI Suggestions – Prolog rule-based expert system (12 IF-THEN rules) providing personalized gentle suggestions
+- Browser Notifications – Pop-up reminders for deadlines within 3 days
+- Admin Panel – View all users and assignments, delete users
+- Crisis Support – Links to NHS mental wellbeing resources and local crisis helpline
 
 ## Tech Stack
 
