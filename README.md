@@ -1,4 +1,8 @@
-# Smart Assignment & Deadline Tracking System with AI Reminders
+# Project Title
+
+Smart Assignment & Deadline Tracking System with AI Reminders
+
+## Description
 
 A web-based application that helps students track assignments, break down tasks into subtasks, monitor stress levels, and receive AI-powered gentle suggestions.
 
@@ -15,26 +19,13 @@ A web-based application that helps students track assignments, break down tasks 
 
 ## Tech Stack
 
-Frontend - HTML, CSS, JavaScript
-Backend - PHP
+- Frontend - HTML, CSS, JavaScript
+- Backend - PHP
 - Database - MySQL
 - AI Engine - Prolog (SWI-Prolog)
 
 ## Project Structure
 
-smart-assignment-tracker/
-- assets/ (CSS, JS, images)
-- classes/ # PHP classes (User, Assignment, Subtask, Repositories)
-- templates/ # HTML templates (login, dashboard, mood tracker, etc.)
-- login.php # Login logic
-- signup.php # Signup logic
-- dashboard.php # Dashboard logic
-- mood_tracker.php # Mood tracker logic
-- ai_suggestion.php # AI suggestion page
-- admin.php # Admin panel
-- subtasks.php # Subtask management
-- ai_rule.pl # Prolog AI rules
-- smart_assignment_tracker.sql # Database export
 
 
 ## Installation
