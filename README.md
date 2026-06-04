@@ -4,14 +4,14 @@ A web-based application that helps students track assignments, break down tasks 
 
 ## 1. Features
 
-- **User Authentication** – Login, Signup, Logout (Student/Admin roles)
-- **Assignment Management** – Add, Edit, Delete assignments with color-coded priority (High/Medium/Low)
-- **Subtask Breakdown** – Break assignments into smaller tasks with progress bar
-- **Mood Tracker** – 3 questions about body, energy, and mind to calculate stress level
-- **AI Suggestions** – Prolog rule-based expert system (12 IF-THEN rules) providing personalized gentle suggestions
-- **Browser Notifications** – Pop-up reminders for deadlines within 3 days
-- **Admin Panel** – View all users and assignments, delete users
-- **Crisis Support** – Links to NHS mental wellbeing resources and local crisis helpline
+- User Authentication – Login, Signup, Logout (Student/Admin roles)
+- Assignment Management – Add, Edit, Delete assignments with color-coded priority (High/Medium/Low)
+- Subtask Breakdown – Break assignments into smaller tasks with progress bar
+- Mood Tracker – 3 questions about body, energy, and mind to calculate stress level
+- AI Suggestions – Prolog rule-based expert system (12 IF-THEN rules) providing personalized gentle suggestions
+- Browser Notifications – Pop-up reminders for deadlines within 3 days
+- Admin Panel – View all users and assignments, delete users
+- Crisis Support – Links to NHS mental wellbeing resources and local crisis helpline
 
 ## 2. Tech Stack
 
@@ -23,7 +23,7 @@ A web-based application that helps students track assignments, break down tasks 
 ## 3. Project Structure
 
 smart-assignment-tracker/
-- assets/ # CSS, JS, images
+- assets/ (CSS, JS, images)
 - classes/ # PHP classes (User, Assignment, Subtask, Repositories)
 - templates/ # HTML templates (login, dashboard, mood tracker, etc.)
 - login.php # Login logic
