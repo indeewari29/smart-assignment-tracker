@@ -263,24 +263,38 @@
             </div>
         </div>
     </div>
+        </div>
+    </div>
+</div>
 
-    <script>
-        <?php
-        $notificationMessage = "";
-        $today = new DateTime();
+<script>
+    <?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    
+    $notificationMessage = "";
+    $today = new DateTime();
 
-        foreach ($assignments as $assignment) {
-            $deadline = new DateTime($assignment->getDeadline());
-            $diff = $today->diff($deadline)->days;
+    if (!isset($_SESSION['notified_this_session'])) {
+        $_SESSION['notified_this_session'] = [];
+    }
 
-            if ($deadline >= $today && $diff <= 3) {
-                $notificationMessage = "⚠️ " . $assignment->getTitle() . " is due in " . $diff . " days!";
-                break;
-            }
+    foreach ($assignments as $assignment) {
+        $deadline = new DateTime($assignment->getDeadline());
+        $diff = $today->diff($deadline)->days;
+        $assignmentId = $assignment->getId();
+
+        if ($deadline >= $today && $diff <= 3 && !in_array($assignmentId, $_SESSION['notified_this_session'])) {
+            $notificationMessage = "👉🏼 " . $assignment->getTitle() . " is due in " . $diff . " days!";
+            $_SESSION['notified_this_session'][] = $assignmentId;
+            break;
         }
-        ?>
+    }
+    ?>
 
-        <?php if ($notificationMessage): ?>
+    <?php if ($notificationMessage): ?>
+        function showNotification() {
             if (Notification.permission === "granted") {
                 new Notification("Assignment Reminder", {
                     body: "<?php echo $notificationMessage; ?>"
@@ -294,41 +308,45 @@
                     }
                 });
             }
-        <?php endif; ?>
-    </script>
-
-    <script>
-        let notifications = [];
-
-        <?php
-        $today = new DateTime();
-        $notificationsArray = [];
-
-        foreach ($assignments as $assignment) {
-            $deadline = new DateTime($assignment->getDeadline());
-            $diff = $today->diff($deadline)->days;
-
-            if ($deadline < $today) {
-                $notificationsArray[] = [
-                    'message' => "" . $assignment->getTitle() . " is overdue !",
-                    'date' => $deadline->format('Y-m-d')
-                ];
-            } elseif ($diff <= 3) {
-                $notificationsArray[] = [
-                    'message' => "" . $assignment->getTitle() . " is due in " . $diff . " days !",
-                    'date' => $deadline->format('Y-m-d')
-                ];
-            }
         }
-        ?>
+        showNotification();
+    <?php endif; ?>
+</script>
 
-        notifications = <?php echo json_encode($notificationsArray); ?>;
+<script>
+    let notifications = [];
 
-        function updateNotifications() {
-            const count = notifications.length;
-            document.getElementById('notificationCount').innerText = count;
+    <?php
+    $today = new DateTime();
+    $notificationsArray = [];
 
-            const listDiv = document.getElementById('notificationList');
+    foreach ($assignments as $assignment) {
+        $deadline = new DateTime($assignment->getDeadline());
+        $diff = $today->diff($deadline)->days;
+
+        if ($deadline < $today) {
+            $notificationsArray[] = [
+                'message' => "" . $assignment->getTitle() . " is overdue !",
+                'date' => $deadline->format('Y-m-d')
+            ];
+        } elseif ($diff <= 3) {
+            $notificationsArray[] = [
+                'message' => "" . $assignment->getTitle() . " is due in " . $diff . " days !",
+                'date' => $deadline->format('Y-m-d')
+            ];
+        }
+    }
+    ?>
+
+    notifications = <?php echo json_encode($notificationsArray); ?>;
+
+    function updateNotifications() {
+        const count = notifications.length;
+        const badge = document.getElementById('notificationCount');
+        if (badge) badge.innerText = count;
+
+        const listDiv = document.getElementById('notificationList');
+        if (listDiv) {
             if (notifications.length === 0) {
                 listDiv.innerHTML = '<div class="notification-item">No new notifications</div>';
             } else {
@@ -339,38 +357,26 @@
                 listDiv.innerHTML = html;
             }
         }
+    }
 
-        function toggleNotifications() {
-            const panel = document.getElementById('notificationPanel');
-            panel.classList.toggle('show');
+    function toggleNotifications() {
+        const panel = document.getElementById('notificationPanel');
+        if (panel) panel.classList.toggle('show');
+    }
+
+    document.addEventListener('click', function(event) {
+        const panel = document.getElementById('notificationPanel');
+        const bell = document.querySelector('.notification-bell');
+        if (panel && bell && !bell.contains(event.target) && !panel.contains(event.target)) {
+            panel.classList.remove('show');
         }
+    });
 
-        document.addEventListener('click', function(event) {
-            const panel = document.getElementById('notificationPanel');
-            const bell = document.querySelector('.notification-bell');
-            if (!bell.contains(event.target) && !panel.contains(event.target)) {
-                panel.classList.remove('show');
-            }
-        });
+    updateNotifications();
+</script>
 
-        updateNotifications();
-
-        <?php if ($notificationMessage): ?>
-            if (Notification.permission === "granted") {
-                new Notification("Assignment Reminder", {
-                    body: "<?php echo $notificationMessage; ?>"
-                });
-            } else if (Notification.permission !== "denied") {
-                Notification.requestPermission().then(permission => {
-                    if (permission === "granted") {
-                        new Notification("Assignment Reminder", {
-                            body: "<?php echo $notificationMessage; ?>"
-                        });
-                    }
-                });
-            }
-        <?php endif; ?>
-    </script>
+</body>
+</html>
 </body>
 
 </html>
